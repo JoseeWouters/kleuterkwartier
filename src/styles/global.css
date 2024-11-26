@@ -17,7 +17,7 @@ body {
   display: grid;
   grid-template-columns: 
     [full-start] minmax(1em, 1fr) 
-    [main-start] minmax(0, 40em) minmax(0, 40em) [main-end]
+    [main-start] minmax(0, 20em) minmax(0, 20em) [main-end]
     minmax(1em, 1fr) [full-end];
     margin-bottom: 2em;
 }
@@ -75,4 +75,9 @@ body {
   margin-top: .5em;
   text-decoration: none;
   color: white;
+}
+
+.main img {
+  display: block;
+  margin-bottom: 1em;
 }
