@@ -1,0 +1,78 @@
+@import url('./reset.css');
+
+@font-face {
+  font-family: 'schoolkx';
+  src: url('/fonts/schoolkx.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'schoolkx';
+  font-size: 1.4rem;
+  background-color: #FFF9E5;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 
+    [full-start] minmax(1em, 1fr) 
+    [main-start] minmax(0, 40em) minmax(0, 40em) [main-end]
+    minmax(1em, 1fr) [full-end];
+    margin-bottom: 2em;
+}
+.header__title a {
+  text-decoration: none;
+  color: black;
+}
+.header__image {
+  grid-column: main;
+  -webkit-mask: url('/images/blob.svg') center / contain no-repeat;
+  mask: url('/images/blob.svg') center / contain no-repeat;
+  border: 2px solid #809B8E;
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}  
+
+.header__image--small {
+  max-height: 200px;
+}
+
+.header__content {
+  grid-column: main;
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 640px) {
+  .header__image {
+    grid-column: 2/3;
+  }
+  .header__content {
+    grid-column: 3/4;
+    justify-self: start;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 
+    [full-start] minmax(1em, 1fr) 
+    [main-start] minmax(0, 40em) [main-end]
+    minmax(1em, 1fr) [full-end];
+}
+
+.main > * {
+  grid-column: main;
+}
+
+.button {
+  display: inline-block;
+  background-color: #809B8E;
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin-top: .5em;
+  text-decoration: none;
+  color: white;
+}
